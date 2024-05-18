@@ -17,3 +17,14 @@ playBtn.addEventListener("click", () => {
         ctrlIcon.classList.replace("fa-play", "fa-pause")
     }
 })
+
+if (song.play()) {
+    setInterval(() => {
+        progress.value = song.currentTime;
+    },500)
+}
+progress.onchange = () => {
+    song.play();
+    song.currentTime = progress.value;
+    ctrlIcon.classList.replace("fa-play", "fa-pause")
+}

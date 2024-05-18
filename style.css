@@ -94,3 +94,6 @@ nav .circle{
     background: #f53192;
     color: #fff;
 }
+#song{
+    opacity: 0;
+}
